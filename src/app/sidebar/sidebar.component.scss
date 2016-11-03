@@ -1,19 +1,25 @@
+@import '../../assets/scss/variables';
+
 aside {
   position: fixed;
   top: 0;
   left: 0;
   width: 240px;
   bottom: 0;
-  background: #444;
+  background: $dark-bg;
   z-index: 0;
   padding-top: 80px;
+}
+
+ul {
+  border-bottom: 1px solid lighten($dark-bg, 10%);
 }
 
 a {
   color: #fff;
   display: block;
   padding: 15px 25px;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #222;
+  border-top: 1px solid lighten($dark-bg, 10%);
+  border-bottom: 1px solid darken($dark-bg, 10%);
   text-decoration: none;
 }

@@ -1,3 +1,5 @@
+@import 'assets/scss/variables';
+
 /* You can add global styles to this file, and also import other style files */
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -47,4 +49,12 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: $light-grey;
 }
