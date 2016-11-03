@@ -1,0 +1,19 @@
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  bottom: 0;
+  background: #444;
+  z-index: 0;
+  padding-top: 80px;
+}
+
+a {
+  color: #fff;
+  display: block;
+  padding: 15px 25px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #222;
+  text-decoration: none;
+}
