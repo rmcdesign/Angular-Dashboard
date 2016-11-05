@@ -1,3 +1,16 @@
 <h2>This is the banners content</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cumque debitis, delectus doloribus esse fugiat minima nam odio possimus,
   quibusdam quis sunt suscipit tempore voluptate voluptates. Eaque fuga laborum rerum.</p>
+
+<hr>
+
+<div class="users">
+  <div class="user-item" *ngFor="let user of users;">{{ user.name }}
+  </div>
+</div>
+
+<hr>
+
+<div class="posts">
+  <div class="post" *ngFor="let post of posts">{{post.title}}</div>
+</div>

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule} from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HomeComponent } from './main-content/home/home.component';
 import { BannersComponent } from './main-content/banners/banners.component';
+import { HttpService } from './http.service.ts';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { BannersComponent } from './main-content/banners/banners.component';
       { path: '', component: HomeComponent }
     ])
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
