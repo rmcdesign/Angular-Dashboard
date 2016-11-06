@@ -1,16 +1,9 @@
 <h2>This is the banners content</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cumque debitis, delectus doloribus esse fugiat minima nam odio possimus,
-  quibusdam quis sunt suscipit tempore voluptate voluptates. Eaque fuga laborum rerum.</p>
 
-<hr>
+<ul>
+  <li><a routerLink="/banners/users" routerLinkActive="active">Users</a></li>
+  <li><a routerLink="/banners/posts" routerLinkActive="active">Posts</a></li>
+</ul>
 
-<div class="users">
-  <div class="user-item" *ngFor="let user of users;">{{ user.name }}
-  </div>
-</div>
+<router-outlet></router-outlet>
 
-<hr>
-
-<div class="posts">
-  <div class="post" *ngFor="let post of posts">{{post.title}}</div>
-</div>
