@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpService } from "../../http.service";
+import {routerTransition} from "../../router.animations";
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
+    animations: [routerTransition()],
+    host: {'[@routerTransition]': ''}
 })
 export class PostComponent implements OnInit {
 

@@ -1,28 +1,30 @@
 import { NgModule }     from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { UserComponent } from "./user.component";
 import { PostComponent } from "./post.component";
 import { BannersComponent } from "./banners.component";
 
+const routes: Routes = [
+    {
+        path: 'banners',
+        component: BannersComponent,
+        children: [
+            {
+                path: 'posts',
+                component: PostComponent
+            },
+            {
+                path: 'users',
+                component: UserComponent
+            }
+        ]
+    }
+];
+
 @NgModule({
     imports: [
-        RouterModule.forChild([
-            {
-                path: 'banners',
-                component: BannersComponent,
-                children: [
-                    {
-                        path: 'posts',
-                        component: PostComponent
-                    },
-                    {
-                        path: 'users',
-                        component: UserComponent
-                    }
-                ]
-            }
-        ])
+        RouterModule.forChild(routes)
     ],
     exports: [
         RouterModule
